@@ -10,6 +10,16 @@ import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Main Activity
+ * Created by Andriy Kuzmenko on 09.11.2020
+ * This activity gets numbers from the users and sens them to another activity that calaculates the sequence.
+ *
+ * @Author Andriy Kuzmenko
+ * @Version 1.1
+ * @Since 1.1
+ */
+
 public class MainActivity extends AppCompatActivity
 {
     ToggleButton typeToggleButton;
@@ -19,6 +29,11 @@ public class MainActivity extends AppCompatActivity
     String dString, a1String;
     double d,a1;
     boolean type;
+
+    /**
+     * @param savedInstanceState
+     * @return Initializes variables
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
