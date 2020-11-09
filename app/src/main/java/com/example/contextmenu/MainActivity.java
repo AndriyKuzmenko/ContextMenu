@@ -35,4 +35,43 @@ public class MainActivity extends AppCompatActivity
 
         type=false;
     }
+
+    public void changeTypeOfProgression(View view)
+    {
+        type=typeToggleButton.isChecked();
+        if (type)
+        {
+            firstItem.setText("b1=");
+            difference.setText("q=");
+        }
+        else
+        {
+            firstItem.setText("a1=");
+            difference.setText("d=");
+        }
+    }
+
+    public void countResults(View view)
+    {
+        dString=differenceInput.getText().toString();
+        a1String=firstItemInput.getText().toString();
+        if (!(check(dString) && check(a1String))) return;
+
+        a1=Double.parseDouble(a1String);
+        d=Double.parseDouble(dString);
+        si.putExtra("type",type);
+        si.putExtra("a1",a1);
+        si.putExtra("d",d);
+        startActivity(si);
+    }
+
+    public boolean check(String s)
+    {
+        if (s==null||s.equals("")||s.equals("-")||s.equals("."))
+        {
+            Toast.makeText(getApplicationContext(), "The input you entered is not valid", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
 }
