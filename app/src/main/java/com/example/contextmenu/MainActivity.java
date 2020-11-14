@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         difference=(TextView)findViewById(R.id.difference);
         firstItemInput=(EditText)findViewById(R.id.firstItemInput);
         differenceInput=(EditText)findViewById(R.id.differenceInput);
-        //si=new Intent(this, ResultsActivity.class);
+        si=new Intent(this, ResultsActivity.class);
 
         type=false;
     }
