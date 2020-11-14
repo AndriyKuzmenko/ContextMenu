@@ -53,6 +53,10 @@ public class ResultsActivity extends AppCompatActivity implements View.OnCreateC
         sequenceView.setOnCreateContextMenuListener(this);
     }
 
+    /**
+     * @return calculates arithmetic dequence
+     */
+
     public void arithmetic()
     {
         currentItem=a1;
@@ -67,6 +71,10 @@ public class ResultsActivity extends AppCompatActivity implements View.OnCreateC
             sequence[i]=currentItem+"";
         }
     }
+
+    /**
+     * @return calculates gemoetric sequence
+     */
 
     public void geometric()
     {
@@ -83,6 +91,14 @@ public class ResultsActivity extends AppCompatActivity implements View.OnCreateC
         }
     }
 
+    /**
+     * 
+     * @param menu
+     * @param v
+     * @param menuInfo
+     * @return shows the menu
+     */
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)
     {
@@ -90,6 +106,12 @@ public class ResultsActivity extends AppCompatActivity implements View.OnCreateC
         menu.add("It's position");
         menu.add("The total of all items till this one");
     }
+
+    /**
+     * 
+     * @param item
+     * @return shows the results on the screen
+     */
 
     @Override
     public boolean onContextItemSelected(MenuItem item)
