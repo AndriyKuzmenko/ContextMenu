@@ -89,11 +89,11 @@
             android:layout_weight="10" />
 
         <Button
-            android:id="@+id/button"
+            android:onClick="back"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="6"
-            android:text="Button" />
+            android:text="Back" />
 
         <Space
             android:layout_width="match_parent"
