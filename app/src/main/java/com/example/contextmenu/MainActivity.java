@@ -30,11 +30,6 @@ public class MainActivity extends AppCompatActivity
     double d,a1;
     boolean type;
 
-    /**
-     * @param savedInstanceState
-     * @return Initializes variables
-     */
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -51,6 +46,11 @@ public class MainActivity extends AppCompatActivity
         type=false;
     }
 
+    /**
+     * @param view
+     * @return Updates the boolean variable that stores the type of progression, and also the text views to say b1, q or a1,d depending on the type of progression
+     */
+
     public void changeTypeOfProgression(View view)
     {
         type=typeToggleButton.isChecked();
@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * @param view
+     * @return makes sure that the input given is valid, and sends it Results activity.
+     */
+
     public void countResults(View view)
     {
         dString=differenceInput.getText().toString();
@@ -80,9 +85,14 @@ public class MainActivity extends AppCompatActivity
         startActivity(si);
     }
 
+
+    /**
+     * @param s - a string variable
+     * @return true if the the string is a valid number, false if it isn't
+     */
     public boolean check(String s)
     {
-        if (s==null||s.equals("")||s.equals("-")||s.equals("."))
+        if (s==null||s.equals("")||s.equals("-")||s.equals(".")||s.equals("-.")||s.charAt(0)=='.'||s.charAt(s.length()-1)=='.')
         {
             Toast.makeText(getApplicationContext(), "The input you entered is not valid", Toast.LENGTH_LONG).show();
             return false;
