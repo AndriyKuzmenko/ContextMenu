@@ -13,6 +13,16 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * ResultsActivity
+ * Created by Andriy Kuzmenko on 14.11.2020
+ * This activity gets numbers from the users and sens them to another activity that calaculates the sequence.
+ *
+ * @Author Andriy Kuzmenko
+ * @Version 1.1
+ * @Since 1.1
+ */
+
 public class ResultsActivity extends AppCompatActivity implements View.OnCreateContextMenuListener, AdapterView.OnItemClickListener
 {
     ListView sequenceView;
@@ -92,7 +102,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnCreateC
     }
 
     /**
-     * 
+     *
      * @param menu
      * @param v
      * @param menuInfo
@@ -108,7 +118,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnCreateC
     }
 
     /**
-     * 
+     *
      * @param item
      * @return shows the results on the screen
      */
